@@ -1,0 +1,141 @@
+.projects {
+  padding: 6rem 0;
+  background: #0a0e27;
+  position: relative;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: rgba(100, 255, 218, 0.05);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #64ffda, #00d4ff);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover::before,
+.project-card.hovered::before {
+  transform: scaleX(1);
+}
+
+.project-card:hover,
+.project-card.hovered {
+  transform: translateY(-8px);
+  background: rgba(100, 255, 218, 0.1);
+  border-color: #64ffda;
+  box-shadow: 0 12px 32px rgba(100, 255, 218, 0.2);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-name {
+  font-size: 1.8rem;
+  color: #ccd6f6;
+  font-weight: 600;
+  margin: 0;
+}
+
+.project-period {
+  color: #64ffda;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-badge {
+  background: rgba(100, 255, 218, 0.15);
+  color: #64ffda;
+  padding: 0.35rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s ease;
+}
+
+.project-card:hover .tech-badge,
+.project-card.hovered .tech-badge {
+  background: rgba(100, 255, 218, 0.25);
+  border-color: #64ffda;
+}
+
+.project-achievements {
+  margin-top: 1rem;
+}
+
+.project-achievements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-achievements li {
+  color: #8892b0;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.project-achievements li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #64ffda;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    padding: 1.5rem;
+  }
+  
+  .project-name {
+    font-size: 1.5rem;
+  }
+  
+  .project-header {
+    flex-direction: column;
+  }
+}
