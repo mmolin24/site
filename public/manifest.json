@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Melvin Molina",
+  "name": "Melvin Molina - Software Engineer",
+  "description": "Software Engineer at Capital One. Building scalable solutions with Java, Python, React, and AWS.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#64ffda",
+  "background_color": "#0a0e27",
+  "orientation": "portrait-primary"
 }

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './Experience.css';
 
 const Experience = () => {
-  const [expandedIndex, setExpandedIndex] = useState(0);
+  // Start with all items expanded
+  const [expandedIndices, setExpandedIndices] = useState(new Set([0, 1]));
 
   const experiences = [
     {
@@ -42,37 +43,48 @@ const Experience = () => {
           Experience
         </h2>
         <div className="timeline">
-          {experiences.map((exp, index) => (
-            <div 
-              key={index}
-              className={`timeline-item ${expandedIndex === index ? 'expanded' : ''}`}
-              onClick={() => setExpandedIndex(index)}
-            >
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <div>
-                    <h3 className="company-name">{exp.company}</h3>
-                    <p className="role">{exp.role}</p>
-                    <p className="location">{exp.location}</p>
+          {experiences.map((exp, index) => {
+            const isExpanded = expandedIndices.has(index);
+            return (
+              <div 
+                key={index}
+                className={`timeline-item ${isExpanded ? 'expanded' : ''}`}
+                onClick={() => {
+                  const newExpanded = new Set(expandedIndices);
+                  if (isExpanded) {
+                    newExpanded.delete(index);
+                  } else {
+                    newExpanded.add(index);
+                  }
+                  setExpandedIndices(newExpanded);
+                }}
+              >
+                <div className="timeline-marker"></div>
+                <div className="timeline-content">
+                  <div className="timeline-header">
+                    <div>
+                      <h3 className="company-name">{exp.company}</h3>
+                      <p className="role">{exp.role}</p>
+                      <p className="location">{exp.location}</p>
+                    </div>
+                    <span className="period">{exp.period}</span>
                   </div>
-                  <span className="period">{exp.period}</span>
-                </div>
-                <div className="tech-stack">
-                  {exp.tech.map((tech, i) => (
-                    <span key={i} className="tech-tag">{tech}</span>
-                  ))}
-                </div>
-                <div className={`achievements ${expandedIndex === index ? 'show' : ''}`}>
-                  <ul>
-                    {exp.achievements.map((achievement, i) => (
-                      <li key={i}>{achievement}</li>
+                  <div className="tech-stack">
+                    {exp.tech.map((tech, i) => (
+                      <span key={i} className="tech-tag">{tech}</span>
                     ))}
-                  </ul>
+                  </div>
+                  <div className={`achievements ${isExpanded ? 'show' : ''}`}>
+                    <ul>
+                      {exp.achievements.map((achievement, i) => (
+                        <li key={i}>{achievement}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
