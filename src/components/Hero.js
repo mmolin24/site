@@ -9,10 +9,10 @@ const Hero = () => {
           <h1 className="hero-name">
             <span className="gradient-text">Melvin Molina</span>
           </h1>
-          <p className="hero-title">Software Engineer</p>
+          <p className="hero-title">Forward Deployed Engineer</p>
           <p className="hero-description">
-            Building scalable solutions at Capital One • 
-            Passionate about clean code, automation, and mentoring
+            Implementing AI-powered automation solutions for healthcare • 
+            Passionate about clean code, automation, and transforming operations
           </p>
         </div>
         <div className="hero-contact">

@@ -3,14 +3,28 @@ import './Experience.css';
 
 const Experience = () => {
   // Start with all items expanded
-  const [expandedIndices, setExpandedIndices] = useState(new Set([0, 1]));
+  const [expandedIndices, setExpandedIndices] = useState(new Set([0, 1, 2]));
 
   const experiences = [
+    {
+      company: 'Thoughtful AI',
+      location: 'Remote',
+      role: 'Forward Deployed Engineer',
+      period: 'Apr 2025 - Present',
+      achievements: [
+        'Partnered with healthcare providers to implement AI-powered automation solutions for revenue cycle management, analyzing customer workflows to identify high-impact opportunities for agent deployment and operational transformation.',
+        'Collaborated cross-functionally with customer technical teams to integrate AI agents into existing healthcare systems, ensuring seamless deployment and alignment with provider requirements and compliance standards.',
+        'Enhanced agent development lifecycle by implementing observability tooling and feedback loops, reducing iteration time and improving agent reliability for production healthcare environments.',
+        'Drove technical discussions and solution architecture with customer stakeholders, translating complex AI automation capabilities into actionable implementations that directly improved revenue cycle efficiency.',
+        'Contributed to the development and refinement of automation workflows using Temporal and Python-based orchestration systems, supporting the mission to transform US healthcare operations through intelligent automation.'
+      ],
+      tech: ['Python', 'Temporal', 'AI Agents', 'AI Automation', 'Healthcare Systems', 'Observability']
+    },
     {
       company: 'Capital One',
       location: 'McLean, VA',
       role: 'Software Engineer',
-      period: 'June 2021 - Present',
+      period: 'June 2021 - October 2024',
       achievements: [
         'Collaborated with cross-functional teams for the development of Lending On Charge (LOC) features for Small Business Card and Upmarket customers, enhancing existing APIs across multiple departments at Capital One.',
         'Operated as the primary contact for LOC contributions across platforms, leading decisions on future enhancements and ensuring efficient knowledge transfers through comprehensive documentation and cross-team coordination.',
