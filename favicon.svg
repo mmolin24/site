@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="cogGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#64ffda;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#0a0e27"/>
+  
+  <!-- Gear/Cog Icon -->
+  <g transform="translate(32,32)">
+    <!-- Outer gear teeth -->
+    <path d="M 24,0 L 26,-4 L 24,-8 L 16,-8 L 14,-4 L 16,0 L 16,6 L 14,6 L 14,12 L 16,12 L 16,18 L 14,22 L 16,26 L 24,26 L 26,22 L 24,18 L 24,12 L 26,12 L 26,6 L 24,6 Z" 
+          fill="url(#cogGradient)" 
+          transform="rotate(0)"/>
+    <path d="M 24,0 L 26,-4 L 24,-8 L 16,-8 L 14,-4 L 16,0 L 16,6 L 14,6 L 14,12 L 16,12 L 16,18 L 14,22 L 16,26 L 24,26 L 26,22 L 24,18 L 24,12 L 26,12 L 26,6 L 24,6 Z" 
+          fill="url(#cogGradient)" 
+          transform="rotate(45)"/>
+    <path d="M 24,0 L 26,-4 L 24,-8 L 16,-8 L 14,-4 L 16,0 L 16,6 L 14,6 L 14,12 L 16,12 L 16,18 L 14,22 L 16,26 L 24,26 L 26,22 L 24,18 L 24,12 L 26,12 L 26,6 L 24,6 Z" 
+          fill="url(#cogGradient)" 
+          transform="rotate(90)"/>
+    <path d="M 24,0 L 26,-4 L 24,-8 L 16,-8 L 14,-4 L 16,0 L 16,6 L 14,6 L 14,12 L 16,12 L 16,18 L 14,22 L 16,26 L 24,26 L 26,22 L 24,18 L 24,12 L 26,12 L 26,6 L 24,6 Z" 
+          fill="url(#cogGradient)" 
+          transform="rotate(135)"/>
+    <!-- Center circle -->
+    <circle cx="0" cy="0" r="8" fill="#0a0e27"/>
+    <circle cx="0" cy="0" r="5" fill="url(#cogGradient)"/>
+  </g>
+</svg>
